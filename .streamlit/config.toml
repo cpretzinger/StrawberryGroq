@@ -1,0 +1,14 @@
+[theme]
+base="dark"
+primaryColor="#33FF33"
+backgroundColor="#000000"
+secondaryBackgroundColor="#001100"
+textColor="#33FF33"
+font="monospace"
+
+[server]
+enableCORS=false
+enableXsrfProtection=false
+
+[browser]
+gatherUsageStats=false

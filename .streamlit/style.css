@@ -1,0 +1,129 @@
+/* Save this in .streamlit/style.css */
+
+/* Global styles */
+.stApp {
+    background-color: #000000;
+    font-family: "Monaco", "Courier New", monospace;
+    color: #33FF33;
+}
+
+/* Base text color */
+.stMarkdown, .stText {
+    color: #33FF33 !important;
+    text-shadow: 0 0 2px #33FF33;
+    font-family: "Monaco", "Courier New", monospace !important;
+}
+
+/* Input fields */
+.stTextInput input {
+    background-color: #000000 !important;
+    color: #33FF33 !important;
+    border: 1px solid #33FF33 !important;
+    font-family: "Monaco", "Courier New", monospace !important;
+    padding: 8px !important;
+}
+
+/* Buttons and interactive elements */
+.stButton button, .stSelectbox select {
+    background-color: #000000 !important;
+    color: #33FF33 !important;
+    border: 1px solid #33FF33 !important;
+    font-family: "Monaco", "Courier New", monospace !important;
+    text-transform: uppercase;
+}
+
+/* Chat message containers */
+.stChatMessage {
+    background-color: rgba(0, 17, 0, 0.4) !important;
+    border: 1px solid #33FF33 !important;
+    margin: 8px 0 !important;
+    padding: 12px !important;
+}
+
+/* CRT screen effects */
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(
+            rgba(51, 255, 51, 0.03),
+            rgba(51, 255, 51, 0.02)
+        );
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Scanline effect */
+.stApp::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(51, 255, 51, 0.15);
+    animation: scanline 10ms linear infinite;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+/* Animations */
+@keyframes scanline {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+@keyframes textflicker {
+    0% { opacity: 0.95; }
+    50% { opacity: 1; }
+    100% { opacity: 0.95; }
+}
+
+/* Header styles */
+h1, h2, h3 {
+    font-family: "Monaco", "Courier New", monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Add phosphor glow effect */
+.stApp {
+    position: relative;
+}
+
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 100px rgba(51, 255, 51, 0.2);
+    pointer-events: none;
+}
+
+/* Link styling */
+a {
+    color: #33FF33 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid #33FF33;
+}
+
+a:hover {
+    text-shadow: 0 0 8px #33FF33;
+}
+
+/* Checkbox styling */
+.stCheckbox label {
+    color: #33FF33 !important;
+    text-shadow: 0 0 2px #33FF33;
+}
+
+.stCheckbox input:checked {
+    background-color: #33FF33 !important;
+    border-color: #33FF33 !important;
+}
